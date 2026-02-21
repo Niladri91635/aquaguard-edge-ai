@@ -3,6 +3,48 @@
 FastAPI-based REST API backend for the **AquaGuard Edge AI** water-leak detection system.
 Designed to pair with the React/Vite frontend and receive sensor data from ESP32 edge devices.
 
+<div align="center">
+
+🌊 **AquaGuard** — Edge-AI Smart Water & Energy Loss Detection System
+
+🚧 *Prototype in Development — AMD Slingshot Hackathon 2026*
+
+</div>
+
+---
+
+## 🌍 Problem Statement
+
+Water infrastructure systems worldwide suffer from:
+- 🚱 Undetected leaks
+- 💧 Massive water loss
+- ⚡ Energy waste due to pump overuse
+- ⏳ Delayed manual inspection
+
+Current monitoring systems lack real-time intelligence and automated response mechanisms.
+
+---
+
+## 💡 Our Solution
+
+AquaGuard is an Edge-AI powered IoT system that:
+- 📊 Uses Flow, Pressure & Vibration sensors
+- 🧠 Performs TinyML inference on ESP32
+- 🚨 Detects anomalies in real-time
+- 🔒 Triggers autonomous valve shutdown
+- ♻ Calculates Water Recovery Efficiency
+- 📈 Displays sustainability analytics via dashboard
+
+---
+
+## 🏗 System Architecture
+
+```
+Sensors → ESP32 (Edge AI) → FastAPI Backend → React Dashboard
+                      ↓
+                Auto Valve Control
+```
+
 ---
 
 ## Architecture
@@ -194,6 +236,38 @@ Send the JSON payload above after every inference cycle.
 
 ---
 
+## 🔧 Hardware Components
+
+| Component | Purpose |
+|---|---|
+| ESP32 | Edge processing + TinyML inference |
+| Flow Sensor | Water flow measurement |
+| Pressure Sensor | Detect pressure anomalies |
+| Vibration Sensor | Pipe vibration analysis |
+| Solenoid Valve | Automatic water shutoff |
+| Relay Module | Valve control |
+
+---
+
+## 💻 Software Stack
+
+- **Frontend**: React + Vite + TypeScript + TailwindCSS
+- **Backend**: FastAPI (Python)
+- **Edge Device**: ESP32 (Arduino Framework)
+- **Machine Learning**: TinyML + Edge Impulse
+
+---
+
+## 🔮 Future Scope
+
+- 🔍 Predictive leak forecasting
+- 🏙 City-wide deployment model
+- ☁ Cloud scaling with analytics
+- 📡 Satellite-integrated water monitoring
+- 🤖 Advanced anomaly pattern learning
+
+---
+
 ## Production Deployment
 
 ```bash
@@ -201,3 +275,9 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 4
 ```
 
 For production, set `DEBUG=false` in `.env` and switch to PostgreSQL.
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
